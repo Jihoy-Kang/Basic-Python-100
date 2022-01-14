@@ -1,4 +1,4 @@
-#Python basic algorithm 9 - 17
+#Python basic algorithm 9 - 24
 
 #9 : input() function
 a = input()
