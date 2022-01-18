@@ -1,4 +1,4 @@
-#Python basic algorithm 52 -
+#Python basic algorithm 52 - 64
 
 #52
 n = int(input())
