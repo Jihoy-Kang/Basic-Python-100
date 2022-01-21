@@ -42,3 +42,34 @@ for i in range(1, 16) :
     m = n*i
     print('%X'%n, '*%X'%i, '=%X'%(n*i), sep='')
 
+#82
+n = int(input())
+for i in range(1, n+1) :
+    if i%10 == 3 :
+        print('X')
+    elif i%10 == 6 :
+        print('X')
+    elif i%10 == 9 :
+        print('X')
+    else :
+        print(i)
+
+#83
+a, b, c = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+
+for i in range(0, a) :
+    for j in range(0, b) :
+        for h in range(0, c) :
+            print(i, j, h)
+print(a*b*c)
+
+#84
+h, b, c, s = input().split()
+h = int(h)
+b = int(b)
+c = int(c)
+s = int(s)
+print(format(h*b*c*s/8/1024/1024, '.1f'),'MB')

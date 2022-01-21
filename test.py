@@ -1,7 +1,6 @@
-n = input()
-n = int(n, 16)
-i = 0
-m = 0
-for i in range(1, 16) :
-    m = n*i
-    print('%X'%n, '*%X'%i, '=%X'%(n*i), sep='')
+h, b, c, s = input().split()
+h = int(h)
+b = int(b)
+c = int(c)
+s = int(s)
+print(format(h*b*c*s/8/1024/1024, '.1f'),'MB')
