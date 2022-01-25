@@ -1,4 +1,4 @@
-#Python basic algorithm 92
+#Python basic algorithm 92 - 98
 
 #92
 n = int(input())
@@ -62,11 +62,11 @@ n = int(input())
 for i in range(n) :
     x, y = map(int, input().split())
     for j in range(19) :
-        if d[j][y-1] == 0:
+        if d[j][y-1] == 0 :
             d[j][y-1] = 1
         else :
             d[j][y-1] = 0
-
+        
         if d[x-1][j] == 0 :
             d[x-1][j] = 1
         else :
@@ -74,5 +74,29 @@ for i in range(n) :
 
 for i in range(19) :
     for j in range(19) :
-        print(d[i][j], end=" ")
+        print(d[i][j], end =' ')
+    print()x
+#97
+d = []
+a, b = map(int, input().split())
+for i in range(a) :
+    d.append([])
+    for j in range(b) :
+        d[i].append(0)
+
+n = int(input())
+for i in range(n) :
+    l, c, x, y = map(int, input().split())
+    for j in range(l) :
+        if c == 0:
+            d[x-1][y-1+j] = 1
+        else :
+            d[x-1+j][y-1] = 1
+
+
+for i in range(a) :
+    for j in range(b) :
+        print(d[i][j], end=' ')
     print()
+    
+#98

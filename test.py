@@ -1,28 +1,21 @@
 d = []
-for i in range(20) :
+a, b = map(int, input().split())
+for i in range(a) :
     d.append([])
-    for j in range(20) :
+    for j in range(b) :
         d[i].append(0)
-
-for i in range(19) :
-    d[i] = list(map(int, input().split()))
 
 n = int(input())
 for i in range(n) :
-    x, y = map(int, input().split())
-    for j in range(19) :
-        if d[j][y-1] == 0:
-            d[j][y-1] = 1
+    l, c, x, y = map(int, input().split())
+    for j in range(l) :
+        if c == 0:
+            d[x-1][y-1+j] = 1
         else :
-            d[j][y-1] = 0
+            d[x-1+j][y-1] = 1
 
-        if d[x-1][j] == 0 :
-            d[x-1][j] = 1
-        else :
-            d[x-1][j] = 0
 
-for i in range(19) :
-    for j in range(19) :
-        print(d[i][j], end=" ")
+for i in range(a) :
+    for j in range(b) :
+        print(d[i][j], end=' ')
     print()
-                
