@@ -100,3 +100,31 @@ for i in range(a) :
     print()
     
 #98
+mz = []
+for i in range(10) :
+    mz.append([])
+    for j in range(10) :
+        mz[i].append(0)
+
+for i in range(10) :
+    mz[i] = list(map(int, input().split()))
+    
+x = 1
+y = 1
+while True :
+    if mz[int(x)][int(y)] == 0 :
+        mz[int(x)][int(y)] = 9
+        y = y + 1
+    elif mz[int(x)][int(y)] == 2:
+        mz[int(x)][int(y)] = 9        
+    else :
+        break
+
+    if mz[int(x)][int(y)] == 1:
+        x = x + 1
+        y = y - 1
+        
+for i in range(10) :
+    for j in range(10) :
+        print(mz[i][j], end=' ')
+    print()
